@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #161827;
+}
+
+h1 {
+    width: 100%;
+    padding-bottom: 0.3em;
+    border-bottom: 1.5px solid #161827;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-family: "Merriweather", sans-serif;
+    font-size: 2em;
+}
+
+h2 {
+    width: 100%;
+    font-family: "Merriweather", sans-serif;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+body {
+    background-image: url(img/publicite.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+
+
+ /*
+    +-----------------------+
+    | banniere_publicitaire |
+    +-----------------------+
+*/
+
+#banniere_publicitaire {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3em;
+    margin-bottom: 3em;
+   
+}
+
+#banniere_publicitaire p {
+    color: #fbf9f9;
+    font-size: 6.7em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.3em;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+/*
+    +---------+
+    | general |
+    +---------+
+*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+}
+
+/*
+    +-------------+
+    | cartes_ours |
+    +-------------+
+*/
+
+.cartes_ours {
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    background-color: #fbf9f9;
+    margin: 2em;
+    padding: 1.8em;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0.1em 0.1em 0.5em grey;
+    opacity: 0.8;
+    transition: transform 300ms ease-in;
+}
+
+.cartes_ours:hover {
+    opacity: 1;
+}
+
+/*clip-path pour une impression d'uniformisation des images*/
+
+.image_ours {
+    width: 400px;
+    height: 260px;
+    clip-path: inset(1% 14% round 2% 2%);
+}
+
+.cartes_ours p {
+    text-align:justify;
+}
+
+.prix_ours {
+    width: 100%;
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.bouton_detail_ours {
+    width: 80%;
+    border: 2px solid #161827;
+    padding: 0.5em;
+    color: #161827;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+
+/*animation_bouton_details*/
+
+.bouton_detail_ours:hover {
+    background-color: #161827;
+    color: #fbf9f9;
+    transform: scale(1.03);
+}
+
+
+
+
+

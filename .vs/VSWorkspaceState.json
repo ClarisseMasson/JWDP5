@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\frontend",
+    "\\frontend\\img"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\frontend\\Index.html",
   "PreviewInSolutionExplorer": false
 }
