@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #161827;
 }
 
 html, body {
@@ -40,19 +39,20 @@ nav {
     justify-content: space-between;
 }
 
-    nav i {
-        color: #fbf9f9;
-    }
+nav i {
+    color: #fbf9f9;
+}
 
 a {
     width: 11%;
-}
+ }
 
 nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     list-style: none;
+
 }
 
 nav a {
@@ -64,6 +64,10 @@ nav a {
     letter-spacing: 0.1em;
     color: #fbf9f9;
     position: relative;
+}
+
+nav span {
+    color: #fbf9f9;
 }
 
 nav li:last-of-type i {

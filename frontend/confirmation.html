@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Teddy by Orinoco,votre nouveau meilleur ami !</title>
     <link rel="stylesheet" href="header_footer.css">
-    <link rel="stylesheet" href="style_panier.css">
+    <link rel="stylesheet" href="style_confirmation.css">
     <link rel="icon" type="image/svg" href="img/icon.svg" />
     <link href="fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:ital,wght@0,300;0,900;1,700&display=swap" rel="stylesheet">
@@ -21,44 +21,24 @@
         </nav>
     </header>
     <main>
-        <h1>Votre panier</h1>
-        <div id="produit_panier">
-            <div id="panier_titres">
-                <h2>Produits</h2>
-                <h2>Couleurs</h2>
-                <h2>Prix</h2>
-            </div>
-            <div id="ours_panier">
-                <!--mon contenu dynamique fait sur JS-->
-            </div>
-            <div id="formulaire">
-                <h2><i class="far fa-id-card"></i>Formulaire</h2>
-                <form id="mon_formulaire">
-                    <div>
-                        <label for="prenom">Prénom :</label>
-                        <input type="text" id="firstname" name="firstName" onblur="verificationChamp(this)" required>
+        <article id="page_confirmation">
+            <img src="img/ours_1.svg" alt="illustration ours">
+            <section id="confirmation">
+                <img src="img/logo_noir.svg" alt="logo Teddy en noir" />
+                <h1>Votre commande est en chemin...</h1>
+                <h2>Merci de votre confiance!</h2>
+                <div id="recapitulatif">
+                    <h3>Récapitulatif de votre commande </h3>
+                    <div id="identifiant">
+                        <h4>Identifiant commande:</h4>
+                        <p></p>
                     </div>
-                    <div>
-                        <label for="nom">Nom :</label>
-                        <input type="text" id="lastname" name="lastName" onblur="verificationChamp(this)" required>
-                    </div>
-                    <div>
-                        <label for="adresse">Adresse :</label>
-                        <input type="text" id="address" name="address" onblur="verificationAdresse(this)" required>
-                    </div>
-                    <div>
-                        <label for="ville">Ville :</label>
-                        <input type="text" id="city" name="city" onblur="verificationChamp(this)" required>
-                    </div>
-                    <div>
-                        <label for="mail">Adresse électronique :</label>
-                        <input type="email" id="email" name="email" onblur="verificationMail(this)" required>
-                    </div>
-                    <button id="envoyer_formulaire" type="submit">Envoyer</button>
-                </form>
-            </div>
-
-        </div>
+                </div>
+                <div id="total">
+                    <p>Total :<span></span></p>
+                </div>
+            </section>
+        </article>
     </main>
     <footer>
         <div id="reseaux_sociaux">
@@ -77,5 +57,5 @@
         </div>
     </footer>
 </body>
-<script src="panier.js"></script>
+<script src="confirmation.js"></script>
 </html>

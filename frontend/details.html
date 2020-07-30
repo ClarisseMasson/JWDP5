@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="panier.html"><i class="far fa-user"></i></a></li>
                 <li><a href="panier.html"><i class="far fa-heart"></i></a></li>
-                <li id="panier"><a href="panier.html"><i class="fas fa-shopping-cart"></i>Panier</a></li>
+                <li id="panier"><a href="panier.html"><i class="fas fa-shopping-cart"></i>Panier<span id="nombre_panier"></span></a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +34,9 @@
                     <div id="histoire_ours"></div>
                     <div id="options">
                         <h2>Choisir ma couleur:</h2>
+                        <span></span>
                         <select id="selection_couleur">
+                            <option>Choisissez une couleur</option>
                         </select>
                     </div>
                 </div>
@@ -43,7 +45,7 @@
                     <div id="prix_ours"></div>
                 </div>
             </div>
-            <button id="ajouter au panier">
+            <button id="ajouter_panier">
                 <i class="far fa-plus-square"></i>
                 Ajouter au panier
             </button>

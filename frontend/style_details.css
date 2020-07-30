@@ -107,7 +107,7 @@ main {
     border: solid 1px gainsboro;
     font-size: 1.1em;
     line-height: 1.5;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.02em;
     padding: 0.1em;
 }
 

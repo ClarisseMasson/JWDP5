@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\backend",
+    "\\backend\\controllers",
+    "\\backend\\routes",
     "\\frontend",
     "\\frontend\\img"
   ],
-  "SelectedNode": "\\frontend\\Index.html",
+  "SelectedNode": "\\frontend\\style_panier.css",
   "PreviewInSolutionExplorer": false
 }
