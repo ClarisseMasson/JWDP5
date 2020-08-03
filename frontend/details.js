@@ -8,30 +8,6 @@ const idOurs = searchParams.get("identite_ours");
 console.log(idOurs);
 
 
-//On met le nombre d'élément panier à jour en utilisant les données stockés dans le local storage
-function updateNavPanier() {
-    //On declare une variable qui va prendre des données dans le localstorage
-    let nombreProduitPanier = localStorage.getItem('nombreOursAjout');
-    //On lui précise que c'est un chiffre entier
-    nombreProduitPanier = parseInt(nombreProduitPanier);
-
-    //je nomme où je vais mettre mon contenu dynamique
-    var navPanier = document.getElementById("nombre_panier");
-
-    //Si pas de données on affiche (0)
-   if (isNaN(nombreProduitPanier)) {
-        navPanier.innerHTML = " (0)";
-   }
-   else {
-     //Si il ya des données on affiche (le nombre dans nombreProduitPanier)
-       navPanier.innerHTML = " (" + nombreProduitPanier + ")";
-    }
-
-};
-
-updateNavPanier();
-
-
 //on utilise fetch pour récupérer les données dans le back-end en lui précisant de ne prendre en compte que l'objet ours ayant l'idOurs correspondant
 fetch('http://localhost:3000/api/teddies/'+ idOurs)
 

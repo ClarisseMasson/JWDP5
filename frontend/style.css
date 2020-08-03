@@ -85,6 +85,17 @@ article {
     +-------------+
 */
 
+.message_erreur {
+    font-size: 1.8em;
+    color: #e46d0c;
+    font-weight :900;
+    background-image: url('img/coche_non.svg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 1.4em;
+    padding: 1em 1.8em 1em 0em;
+}
+
 .cartes_ours {
     display: flex;
     flex-direction: column;

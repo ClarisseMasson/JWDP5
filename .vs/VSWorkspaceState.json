@@ -3,10 +3,8 @@
     "",
     "\\backend",
     "\\backend\\controllers",
-    "\\backend\\routes",
-    "\\frontend",
-    "\\frontend\\img"
+    "\\frontend"
   ],
-  "SelectedNode": "\\frontend\\style_panier.css",
+  "SelectedNode": "\\frontend\\script.js",
   "PreviewInSolutionExplorer": false
 }
