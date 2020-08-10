@@ -19,7 +19,7 @@ else {
         carteIdentite.removeChild(carteIdentite.firstChild);
     };
     carteIdentite.innerHTML += `
-            <img src="img/ours_2.svg"></img>
+            <img src="img/ours_pleure.svg" alt="illustration ours triste probleme url">
             <div class="message_erreur">
                 <h1>Aucun ours<br/>n'a été sélectionné</h1>
                 <p>Veuillez choisir votre ours ci-dessous</p>
@@ -121,7 +121,7 @@ function executerFetch() {
             carteIdentite.removeChild(carteIdentite.firstChild);
         };
         carteIdentite.innerHTML += `
-            <img src="img/ours_3.svg"></img>
+            <img src="img/ours_confu.svg" alt="illustration ours confu probleme url">
             <div class="message_erreur">
                 <h1>Votre ours<br/>est introuvable</h1>
                 <p>Produit indisponible...<br/>Voulez-vous choisir un autre ours ?</p>

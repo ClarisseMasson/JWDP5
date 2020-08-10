@@ -88,7 +88,7 @@ main {
     width: 35%;
 }
 
-section {
+#confirmation {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@ section {
     align-items: center;
 }
 
-#page_confirmation section img {
+#confirmation img {
     width: 30%;
     margin-bottom: 0.8em;
 }
