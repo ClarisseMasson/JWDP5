@@ -1,3 +1,9 @@
+/*
+    +---------+
+    | Général |
+    +---------+
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -53,6 +59,18 @@ h4 {
     font-size: 1.2em;
     padding: 0.2em;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+    +-----------------+
+    | contenu message |
+    +-----------------+
+*/
 
 #page_confirmation {
     width: 60%;
@@ -121,6 +139,8 @@ section {
     text-align: right;
     letter-spacing: 0em;
 }
+
+/*si pas de formulaire validé prix en orange*/
 
 .erreur {
     color: #e46c0d;

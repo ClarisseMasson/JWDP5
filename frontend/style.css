@@ -1,3 +1,9 @@
+/*
+    +---------+
+    | Général |
+    +---------+
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -26,19 +32,32 @@ h2 {
     letter-spacing: 0.03em;
 }
 
-body {
-    background-image: url(img/publicite.jpg);
-    background-position: top right;
-    background-repeat: no-repeat;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+}
 
  /*
     +-----------------------+
     | banniere_publicitaire |
     +-----------------------+
 */
+ 
+body {
+    background-image: url(img/publicite.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
 
 #banniere_publicitaire {
     width: 70%;
@@ -57,26 +76,6 @@ body {
     letter-spacing: 0.08em;
     line-height: 1.3em;
     text-shadow: 1px 1px 5px #000000;
-}
-
-/*
-    +---------+
-    | general |
-    +---------+
-*/
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-article {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 70%;
 }
 
 /*

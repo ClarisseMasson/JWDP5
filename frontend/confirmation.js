@@ -4,14 +4,14 @@ confirmerCommande();
 function confirmerCommande() {
     //On declare une variable qui va récupérer les données du tableau
     let confirmerLaCommande = localStorage.getItem('confirmationCommande');
-    let identifiantCommande = document.querySelector("#identifiant p");
-    let total = document.querySelector("#total span");
+    const identifiantCommande = document.querySelector("#identifiant p");
+    const total = document.querySelector("#total span");
     let totalPrix = 0;
     //Si pas de données, on mets un tableau vide
     if (confirmerLaCommande == null) {
         confirmerLaCommande = [];
-        identifiantCommande.innerHTML = "Nous n'avons rien trouv\u00e9...";
-        total.innerHTML = " " + totalPrix + "\u20ac";
+        identifiantCommande.textContent = "Nous n'avons rien trouv\u00e9...";
+        total.textContent = " 0 \u20ac";
         total.classList.add("erreur");
 
     }
@@ -25,7 +25,7 @@ function confirmerCommande() {
            totalPrix += produit.price;
         };
 
-        total.innerHTML = " " +(totalPrix / 100).toFixed(2) + "\u20ac";        
+        total.textContent = " " + (totalPrix / 100).toFixed(2) + "\u20ac";        
     }
    
 };

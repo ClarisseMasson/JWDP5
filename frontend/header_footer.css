@@ -1,3 +1,9 @@
+/*
+    +---------+
+    | GENERAL |
+    +---------+
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +36,6 @@ header {
     justify-content: center;
     font-family: Lato, sans-serif;
 }
-
 
 nav {
     width: 90%;
@@ -74,7 +79,6 @@ nav li:last-of-type i {
     margin-right: 0.2em;
 }
 
-
 /*
     +--------------------------+
     | animation_soulignage_nav |
@@ -94,6 +98,7 @@ ul a::after {
 }
 
 /*Je fais apparaitre la ligne*/
+
 ul a:hover::after {
     opacity: 1;
     transform: scaleX(1);
@@ -104,18 +109,15 @@ nav li {
     transition: transform 300ms ease-in;
 }
 
-    nav li:hover {
-        transform: scale(1.05);
-    }
-
-
+nav li:hover {
+    transform: scale(1.05);
+}
 
 /*
     +--------+
     | FOOTER |
     +--------+
 */
-
 
 footer {
     background-color: #161827;
@@ -133,10 +135,10 @@ footer {
     justify-content: space-between;
 }
 
-    #reseaux_sociaux i {
-        color: white;
-        font-size: 2em;
-    }
+#reseaux_sociaux i {
+    color: white;
+    font-size: 2em;
+}
 
 #conditions {
     width: 90%;
@@ -144,7 +146,6 @@ footer {
     flex-direction: row;
     justify-content: space-between;
 }
-
 
 #conditions p, a {
     text-align: left;

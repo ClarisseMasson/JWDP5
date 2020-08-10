@@ -4,7 +4,7 @@ ajouterOursPanier();
 function ajouterOursPanier () {
     //On declare une variable qui va récupérer les données du tableau
     let tableauOursPanier = localStorage.getItem('tableauOursPourPanier');
-    let panierOurs = document.getElementById("ours_panier");
+    const panierOurs = document.getElementById("ours_panier");
 
     //Si pas de données, on mets un tableau vide
     if (tableauOursPanier == null) {
@@ -12,7 +12,7 @@ function ajouterOursPanier () {
         const panierOursVide = document.createElement("div");
         panierOurs.appendChild(panierOursVide);
         panierOurs.innerHTML = '<div id="panier_vide">Votre panier est vide...</div>';
-        let formulaire = document.getElementById("formulaire")
+        const formulaire = document.getElementById("formulaire")
         formulaire.remove();
 
     }
@@ -21,7 +21,7 @@ function ajouterOursPanier () {
         console.log(tableauOursPanier);
         tableauOursPanier = JSON.parse(tableauOursPanier);
         //je lui indique que total prix egal 0 à la base
-        var totalPrix = 0;
+        let totalPrix = 0;
          //Pour chaque element ours reçus du tableauOursPanier...
         for (const elementOurs of tableauOursPanier) {
             panierOurs.innerHTML += `
@@ -43,7 +43,7 @@ function ajouterOursPanier () {
         <div id="prix_total"><h4>Total :</h4><strong>${(totalPrix / 100).toFixed(2)}\u20ac</strong></div>
         `;
 
-        let monFormulaire = document.getElementById("mon_formulaire");
+        const monFormulaire = document.getElementById("mon_formulaire");
 
         //on lui dit que si on soumet le formulaire...
         monFormulaire.addEventListener("submit", (e) => {
@@ -58,83 +58,84 @@ function ajouterOursPanier () {
 
 //On vérifie si le champ a bien au moins une lettre et que ce n'est pas un nombre
 function verificationChamp(champ) {
-    var regex = /^[a-z\u00C0-\u017F\-\']+$/i;
+    const regex = /^[a-z\u00C0-\u017F\-\']+$/i;
     if (champ.value.length < 1 || !regex.test(champ.value)) {
         indiqueErreur(champ, true);
-        indiqueValid(champ, false);
         return false;
     }
     else {
         indiqueErreur(champ, false);
-        indiqueValid(champ, true);
         return true;
     }
 };
 //On vérifie si le champ a bien avec d'abord un ou des chiffres puis un espace et des lettres
 function verificationAdresse(champ) {
-    var regex = /^[0-9]+\s[\sa-z\u00C0-\u017F\-\']+$/i;
+    const regex = /^[0-9]+\s[\sa-z\u00C0-\u017F\-\']+$/i;
     if (champ.value.length < 2 || !regex.test(champ.value)) {
         indiqueErreur(champ, true);
-        indiqueValid(champ, false);
         return false;
     }
     else {
         indiqueErreur(champ, false);
-        indiqueValid(champ, true);
         return true;
     }
 };
 
 //On vérifie si le champ est bien une adresse mail
 function verificationMail(champ) {
-    var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+    const regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
     if (!regex.test(champ.value)) {
         indiqueErreur(champ, true);
-        indiqueValid(champ, false);
         return false;
     }
     else {
         indiqueErreur(champ, false);
-        indiqueValid(champ, true);
         return true;
     }
 }
 
-//si le champ nous renvoie une erreur on ajoute une classe champ_invalid
+//si le champ nous renvoie une erreur on ajoute une classe champ_invalid sinon on ajoute une classe champ_valid et puis on appelle le formulaireValidation
 function indiqueErreur(champ, erreur) {
-    if (erreur)
+    if (erreur) {
+        champ.classList.remove("champ_valid");
         champ.classList.add("champ_invalid");
-    else
+    }
+
+    else {
         champ.classList.remove("champ_invalid");
+        champ.classList.add("champ_valid");
+
+    }
+    formulaireValidation();
+
 };
 
-//si le champ nous renvoie true on ajoute une classe champ_valid
-function indiqueValid(champ, validation) {
-    if (validation) {
-        champ.classList.add("champ_valid");
-    }
-    else {
-        champ.classList.remove("champ_valid");
-    }
-};
 
 //Il renvoie true si tous les champs sont valides
 function formulaireValidation() {
-    let Input = document.querySelectorAll("#formulaire form input");
-    let nombreInput = Input.length;
-    let listeClasseValide = document.getElementsByClassName("champ_valid");
+    const Input = document.querySelectorAll("#formulaire form input");
+    const nombreInput = Input.length;
+    const listeClasseValide = document.getElementsByClassName("champ_valid");
 //si le nombre de champs valides est = au nombre de champs à remplir il renvoie true
     if (listeClasseValide.length == nombreInput) {
+
+        const bouton = document.getElementById("envoyer_formulaire");
+        //on enlève la classe qui fait que le bouton est rouge(définie dans css)
+        //on met la classe qui fait que le bouton est vert(définie dans css)
+        bouton.classList.remove("erreur_bouton");
+        bouton.classList.add("bon_bouton");
         return true;
     }
     else {
+        //window.alert("mauvais");
+        const bouton = document.getElementById("envoyer_formulaire");
+        //on met la classe qui fait que le bouton est rouge(définie dans css)
+        bouton.classList.add("erreur_bouton");
         return false;
-
     }
-
 };
 
-let monFormulaire = document.getElementById("mon_formulaire");
+const monFormulaire = document.getElementById("mon_formulaire");
 
 function envoyerFormulaire() {
 
@@ -143,7 +144,7 @@ function envoyerFormulaire() {
 
         //on créé un un tableau dont les données contact équivalent au valeurs entrés dans le formulaire
         //on lui donne ces noms pour que cela corresponde à ce que le serveur attend
-        var maCommande = {};
+        let maCommande = {};
         maCommande.contact = {
             "firstName": document.getElementById("firstname").value,
             "lastName": document.getElementById("lastname").value,
@@ -166,11 +167,11 @@ function envoyerFormulaire() {
         console.log(JSON.stringify(maCommande));
 
         //on lui précise que les données sont en JSON
-        var monFormat = new Headers();
+        const monFormat = new Headers();
         monFormat.append('Content-Type', 'application/json');
 
         //on poste notre tableau contact et les id des ours du panier
-        var monFormatCommande = {
+        const monFormatCommande = {
             method: 'POST',
             headers: monFormat,
             body: JSON.stringify(maCommande)
@@ -193,6 +194,5 @@ function envoyerFormulaire() {
     else {
         console.log("erreur_formulaire");
     }
-
 };
 

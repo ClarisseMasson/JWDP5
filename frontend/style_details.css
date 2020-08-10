@@ -1,3 +1,9 @@
+/*
+    +---------+
+    | Général |
+    +---------+
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +21,7 @@ h1 {
     letter-spacing: 0.2em;
     margin-left: 0.5em;
 }
+
 
 h2 {
     font-family: "Merriweather", sans-serif;
@@ -34,8 +41,13 @@ main {
     align-items:center;
 }
 
+/*
+    +-------------------------------+
+    | SI BONNE URL carte d'identite |
+    +-------------------------------+
+*/
 
-#carte_identite {
+.bonne_url {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -128,8 +140,8 @@ main {
     opacity:0.8;
 }
 
-
-button {
+.bonne_url button {
+    outline: none;
     width: 100%;
     text-decoration: none;
     border: none;
@@ -144,16 +156,108 @@ button {
     padding: 0.4em;
 }
 
-button:hover {
+/*au survol couleur bouton inversé*/
+
+.bonne_url button:hover {
     background-color: #161827;
     color: white;
     opacity: 0.8;
 }
 
-button:hover i {
+.bonne_url button:hover i {
     background-color: #161827;
     color: white;
-
 }
 
+/*au click couleur bouton vert*/
 
+.bonne_url button:active, .bonne_url button:active i {
+    background-color: #006a5d;
+    opacity: 1;
+}
+
+/*
+    +--------------------------------+
+    | SI ERREUR URL message d'erreur |
+    +--------------------------------+
+*/
+
+/*message et image différente selon l'erreur dans l'url mais même mise en page*/
+
+
+.erreur_url {
+    border-radius: 0em;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fbf9f9;
+    padding: 4em;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+}
+
+.erreur_url img {
+    width: 35%;
+}
+
+.message_erreur {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.erreur_url h1 {
+    width: 100%;
+    color: #161827;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    border-left: 2px solid #fbf9f9;
+    margin-bottom: 0em;
+    margin-bottom: 0.4em;
+}
+
+.erreur_url p {
+    width: 100%;
+    color: #161827;
+    font-family: "Merriweather", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.6em;
+    text-align: center;
+    border-left: 2px solid #fbf9f9;
+    margin-bottom: 0.1em;
+    margin-bottom: 0.7em;
+}
+
+.erreur_url a {
+    width: 30%;
+    color: white;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    background-color: #006a5d;
+    border-radius: 1em;
+    padding: 0.4em;
+    opacity: 0.8;
+    box-shadow: 0.05em 0.05em 0.1em grey;
+    transform: scale(1);
+    transition: transform 200ms;
+}
+
+/*animation du bouton choisir qui renvoie à la page Index*/
+
+.erreur_url a:hover {
+    opacity: 1;
+    transform: scale(1.01);
+}
