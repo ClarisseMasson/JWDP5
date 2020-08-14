@@ -287,7 +287,7 @@ button:hover {
 
 .champ_valid {
     color: #006a5d;
-    background-image: url('img/coche.svg');
+    background-image: url('../img/coche.svg');
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 1.4em;
@@ -297,7 +297,7 @@ button:hover {
 
 .champ_invalid {
     color: #e46c0d;
-    background-image: url('img/coche_non.svg');
+    background-image: url('../img/coche_non.svg');
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 1.4em;

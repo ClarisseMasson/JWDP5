@@ -49,7 +49,7 @@ for (const ours of tableauOurs) {
     imageOurs.setAttribute("src", ours.imageUrl);
 
     //...On précise le chemin du bouton en utilisant l'id(qui va varier)
-    boutonDetailOurs.setAttribute("href", "details.html?identite_ours=" + ours._id);
+    boutonDetailOurs.setAttribute("href", "../details/details.html?identite_ours=" + ours._id);
 
     //...On va chercher l'élément où on va mettre nos contenus dynamiques
     const produits = document.getElementById("produits");

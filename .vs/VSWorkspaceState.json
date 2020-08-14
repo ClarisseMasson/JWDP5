@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\frontend",
+    "\\frontend\\img"
   ],
-  "SelectedNode": "\\frontend",
+  "SelectedNode": "\\frontend\\panier.js",
   "PreviewInSolutionExplorer": false
 }

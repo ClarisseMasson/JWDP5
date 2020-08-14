@@ -54,7 +54,7 @@ article {
 */
  
 body {
-    background-image: url(img/publicite.jpg);
+    background-image: url(../img/publicite.jpg);
     background-position: top right;
     background-repeat: no-repeat;
 }
@@ -88,7 +88,7 @@ body {
     font-size: 1.8em;
     color: #e46d0c;
     font-weight :900;
-    background-image: url('img/coche_non.svg');
+    background-image: url('../img/coche_non.svg');
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 1.4em;

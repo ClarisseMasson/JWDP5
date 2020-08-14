@@ -48,7 +48,7 @@ function ajouterOursPanier () {
         //on lui dit que si on soumet le formulaire...
         monFormulaire.addEventListener("submit", (e) => {
             e.preventDefault();
-         //on lui dit que si on soumet le formulaire...
+         //...on l'envoie avec la fonction
            envoyerFormulaire();
 
         });
@@ -188,7 +188,7 @@ function envoyerFormulaire() {
                 console.log(confirmation.orderId);
                 localStorage.setItem("confirmationCommande", JSON.stringify(confirmation));
                //on est renvoyé directement sur la page confirmation
-               window.location.href = "confirmation.html";
+               window.location.href = "../confirmation/confirmation.html";
             });
     }
     else {
